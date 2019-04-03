@@ -24,7 +24,7 @@ class Solution1 {
         return numIslands;
     }
 
-    void dfs(char[][] grid, int r, int c) {
+    private void dfs(char[][] grid, int r, int c) {
         int rows = grid.length;
         int cols = grid[0].length;
 
