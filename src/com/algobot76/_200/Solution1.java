@@ -1,7 +1,7 @@
 package com.algobot76._200;
 
 /**
- * This solution is solved by using DFS.
+ * This problem is solved by using DFS.
  */
 class Solution1 {
     public int numIslands(char[][] grid) {
