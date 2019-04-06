@@ -1,7 +1,7 @@
 package com.algobot76._5;
 
 /**
- * Brute Force
+ * Expand Around Center
  */
 public class Solution1 {
     public String longestPalindrome(String s) {
