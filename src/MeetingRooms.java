@@ -1,12 +1,14 @@
-package com.algobot76._252;
-
 import util.Interval;
 
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class Solution {
-    // Sorting
+/**
+ * 252. Meeting Rooms
+ *
+ * @author Kaitian Xie
+ */
+public class MeetingRooms {
     public boolean canAttendMeetings(Interval[] intervals) {
         Arrays.sort(intervals, Comparator.comparingInt(l -> l.start));
         for (int i = 0; i < intervals.length - 1; i++) {

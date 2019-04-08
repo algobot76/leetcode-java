@@ -1,8 +1,11 @@
-package com.algobot76._143;
-
 import util.ListNode;
 
-public class Solution1 {
+/**
+ * 143. Reorder List
+ *
+ * @author Kaitian Xie
+ */
+public class ReorderList {
     public void reorderList(ListNode head) {
         if (head == null) {
             return;

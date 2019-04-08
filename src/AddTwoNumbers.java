@@ -1,8 +1,11 @@
-package com.algobot76._2;
-
 import util.ListNode;
 
-public class Solution1 {
+/**
+ * 2. Add Two Numbers
+ *
+ * @author Kaitian Xie
+ */
+public class AddTwoNumbers {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode dummyHead = new ListNode(0);
         ListNode p = l1;
