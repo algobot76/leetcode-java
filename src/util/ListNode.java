@@ -1,4 +1,4 @@
-package com.algobot76.util;
+package util;
 
 public class ListNode {
     public int val;

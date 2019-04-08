@@ -1,6 +1,6 @@
 package com.algobot76._141;
 
-import com.algobot76.util.ListNode;
+import util.ListNode;
 
 import java.util.HashSet;
 import java.util.Set;

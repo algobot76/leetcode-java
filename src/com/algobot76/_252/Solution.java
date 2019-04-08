@@ -1,6 +1,6 @@
 package com.algobot76._252;
 
-import com.algobot76.util.Interval;
+import util.Interval;
 
 import java.util.Arrays;
 import java.util.Comparator;

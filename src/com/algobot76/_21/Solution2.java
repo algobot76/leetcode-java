@@ -1,6 +1,6 @@
 package com.algobot76._21;
 
-import com.algobot76.util.ListNode;
+import util.ListNode;
 
 /**
  * Iteration

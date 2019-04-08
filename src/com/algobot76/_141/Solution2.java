@@ -1,6 +1,6 @@
 package com.algobot76._141;
 
-import com.algobot76.util.ListNode;
+import util.ListNode;
 
 /**
  * This problem is solved by using two pointers.
