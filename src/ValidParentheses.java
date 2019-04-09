@@ -9,25 +9,60 @@ import java.util.Map;
  * @author Kaitian Xie
  */
 public class ValidParentheses {
-    public boolean isValid(String s) {
-        Map<Character, Character> mapppings = new HashMap<>();
-        mapppings.put(')', '(');
-        mapppings.put('}', '{');
-        mapppings.put(']', '[');
-        Deque<Character> stack = new ArrayDeque<>();
+    // Stack
+//    public boolean isValid(String s) {
+//        Map<Character, Character> mapppings = new HashMap<>();
+//        mapppings.put(')', '(');
+//        mapppings.put('}', '{');
+//        mapppings.put(']', '[');
+//        Deque<Character> stack = new ArrayDeque<>();
+//
+//        for (int i = 0; i < s.length(); i++) {
+//            char ch = s.charAt(i);
+//            if (mapppings.containsKey(ch)) {
+//                char top = stack.isEmpty() ? '#' : stack.pop();
+//                if (top != mapppings.get(ch)) {
+//                    return false;
+//                }
+//            } else {
+//                stack.push(ch);
+//            }
+//        }
+//
+//        return stack.isEmpty();
+//    }
 
-        for (int i = 0; i < s.length(); i++) {
-            char ch = s.charAt(i);
-            if (mapppings.containsKey(ch)) {
-                char top = stack.isEmpty() ? '#' : stack.pop();
-                if (top != mapppings.get(ch)) {
-                    return false;
-                }
-            } else {
-                stack.push(ch);
+    // Stack (Optimized)
+    public boolean isValid(String s) {
+        if (s == null || s.length() == 0) {
+            return true;
+        }
+
+        int ptr = 0;
+        char[] map = new char[s.length()];
+
+        for (char letter : s.toCharArray()) {
+            switch (letter) {
+                case '(':
+                case '{':
+                case '[':
+                    map[ptr++] = letter;
+                    break;
+                case ')':
+                    if (ptr == 0 || map[--ptr] != '(')
+                        return false;
+                    break;
+                case '}':
+                    if (ptr == 0 || map[--ptr] != '{')
+                        return false;
+                    break;
+                case ']':
+                    if (ptr == 0 || map[--ptr] != '[')
+                        return false;
+                    break;
             }
         }
 
-        return stack.isEmpty();
+        return ptr == 0;
     }
 }
