@@ -41,12 +41,12 @@ public class ValidParentheses {
         int ptr = 0;
         char[] map = new char[s.length()];
 
-        for (char letter : s.toCharArray()) {
-            switch (letter) {
+        for (char ch : s.toCharArray()) {
+            switch (ch) {
                 case '(':
                 case '{':
                 case '[':
-                    map[ptr++] = letter;
+                    map[ptr++] = ch;
                     break;
                 case ')':
                     if (ptr == 0 || map[--ptr] != '(')
