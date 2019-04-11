@@ -1,11 +1,8 @@
+package com.algobot76.leetcode._143;
+
 import com.algobot76.leetcode.util.ListNode;
 
-/**
- * 143. Reorder List
- *
- * @author Kaitian Xie
- */
-public class ReorderList {
+public class Solution1 {
     public void reorderList(ListNode head) {
         if (head == null) {
             return;
