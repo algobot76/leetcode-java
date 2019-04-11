@@ -1,11 +1,8 @@
+package com.algobot76.leetcode._206;
+
 import com.algobot76.leetcode.util.ListNode;
 
-/**
- * 206. Reverse Linked List
- *
- * @author Kaitian Xie
- */
-public class ReverseLinkedList {
+public class Solution1 {
     public ListNode reverseList(ListNode head) {
         if (head == null || head.next == null) {
             return head;
