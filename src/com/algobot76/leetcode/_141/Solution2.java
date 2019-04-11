@@ -1,26 +1,11 @@
+package com.algobot76.leetcode._141;
+
 import com.algobot76.leetcode.util.ListNode;
 
 /**
- * 141. Linked List Cycle
- *
- * @author Kaitian Xie
+ * Two Pointers
  */
-public class LinkedListCycle {
-    // Hash Table
-//    public boolean hasCycle(ListNode head) {
-//        Set<ListNode> visited = new HashSet<>();
-//        while (head != null) {
-//            if (visited.contains(head)) {
-//                return true;
-//            } else {
-//                visited.add(head);
-//            }
-//            head = head.next;
-//        }
-//        return false;
-//    }
-
-    // Two Pointers
+public class Solution2 {
     public boolean hasCycle(ListNode head) {
         if (head == null || head.next == null) {
             return false;
