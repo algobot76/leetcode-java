@@ -1,18 +1,9 @@
-import java.util.Arrays;
+package com.algobot76.leetcode._88;
 
 /**
- * 88. Merge Sorted Array
- *
- * @author Kaitian Xie
+ * Two Pointers
  */
-public class MergeSortedArray {
-    // Naive Approach
-//    public void merge(int[] nums1, int m, int[] nums2, int n) {
-//        System.arraycopy(nums2, 0, nums1, m, n);
-//        Arrays.sort(nums1);
-//    }
-
-    // Two Pointers
+public class Solution2 {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         int[] nums1Copy = new int[m];
         System.arraycopy(nums1, 0, nums1Copy, 0, m);
