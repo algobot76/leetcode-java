@@ -1,4 +1,4 @@
-package util;
+package com.algobot76.leetcode.util;
 
 public class Interval {
     public int start;

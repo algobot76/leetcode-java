@@ -1,4 +1,4 @@
-import util.ListNode;
+import com.algobot76.leetcode.util.ListNode;
 
 /**
  * 2. Add Two Numbers

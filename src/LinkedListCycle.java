@@ -1,7 +1,4 @@
-import util.ListNode;
-
-import java.util.HashSet;
-import java.util.Set;
+import com.algobot76.leetcode.util.ListNode;
 
 /**
  * 141. Linked List Cycle

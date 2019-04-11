@@ -1,4 +1,4 @@
-import util.ListNode;
+import com.algobot76.leetcode.util.ListNode;
 
 /**
  * 21. Merge Two Sorted Lists

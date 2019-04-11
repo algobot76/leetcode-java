@@ -1,4 +1,4 @@
-import util.Interval;
+import com.algobot76.leetcode.util.Interval;
 
 import java.util.Arrays;
 import java.util.Comparator;
