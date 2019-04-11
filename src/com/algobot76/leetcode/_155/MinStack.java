@@ -1,11 +1,8 @@
+package com.algobot76.leetcode._155;
+
 import java.util.ArrayDeque;
 import java.util.Deque;
 
-/**
- * 155. Min Stack
- *
- * @author Kaitian Xie
- */
 public class MinStack {
     private Deque<Integer> stack;
     private Deque<Integer> min;
