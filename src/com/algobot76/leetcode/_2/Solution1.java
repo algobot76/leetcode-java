@@ -1,11 +1,8 @@
+package com.algobot76.leetcode._2;
+
 import com.algobot76.leetcode.util.ListNode;
 
-/**
- * 2. Add Two Numbers
- *
- * @author Kaitian Xie
- */
-public class AddTwoNumbers {
+public class Solution1 {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode dummyHead = new ListNode(0);
         ListNode p = l1;
