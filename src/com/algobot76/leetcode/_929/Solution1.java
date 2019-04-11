@@ -1,12 +1,9 @@
+package com.algobot76.leetcode._929;
+
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * 929. Unique Email Addresses
- *
- * @author Kaitian Xie
- */
-class UniqueEmailAddresses {
+public class Solution1 {
     public int numUniqueEmails(String[] emails) {
         Set<String> visited = new HashSet<>();
         for (String email : emails) {
