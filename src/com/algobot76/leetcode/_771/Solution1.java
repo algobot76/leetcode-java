@@ -1,12 +1,9 @@
+package com.algobot76.leetcode._771;
+
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * 771. Jewels and Stones
- *
- * @author Kaitian Xie
- */
-public class JewelsAndStones {
+public class Solution1 {
     public int numJewelsInStones(String J, String S) {
         Set<Character> jSet = new HashSet<>();
         for (char j : J.toCharArray()) {
