@@ -1,9 +1,6 @@
-/**
- * 7. Reverse Integer
- *
- * @author Kaitian Xie
- */
-public class ReverseInteger {
+package com.algobot76.leetcode._7;
+
+public class Solution1 {
     public int reverse(int x) {
         int rev = 0;
         while (x != 0) {
