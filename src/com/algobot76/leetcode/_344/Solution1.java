@@ -1,9 +1,6 @@
-/**
- * 344. Reverse String
- *
- * @author Kaitian Xie
- */
-public class ReverseString {
+package com.algobot76.leetcode._344;
+
+public class Solution1 {
     public void reverseString(char[] s) {
         int start = 0;
         int end = s.length - 1;
