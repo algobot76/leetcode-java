@@ -15,17 +15,17 @@ public class Solution2 {
         return ans;
     }
 
-    private void dfs(String digits, String[] phone, int idx, char[] curr, List<String> ans) {
-        if (idx == digits.length()) {
-            if (idx > 0) {
+    private void dfs(String digits, String[] phone, int len, char[] curr, List<String> ans) {
+        if (len == digits.length()) {
+            if (len > 0) {
                 ans.add(new String(curr));
             }
             return;
         }
-        String str = phone[Character.getNumericValue(digits.charAt(idx))];
+        String str = phone[Character.getNumericValue(digits.charAt(len))];
         for (int i = 0; i < str.length(); i++) {
-            curr[idx] = str.charAt(i);
-            dfs(digits, phone, idx + 1, curr, ans);
+            curr[len] = str.charAt(i);
+            dfs(digits, phone, len + 1, curr, ans);
         }
     }
 }
