@@ -1,7 +1,7 @@
 package com.algobot76.leetcode._560;
 
 /**
- * Accumulative Sum (Optimized)
+ * Cumulative Sum (Optimized)
  */
 public class Solution2 {
     public int subarraySum(int[] nums, int k) {
