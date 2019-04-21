@@ -4,6 +4,9 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
+/**
+ * Priority Queue
+ */
 public class Solution1 {
     public int kthSmallest(int[][] matrix, int k) {
         int m = matrix.length;
