@@ -1,28 +1,22 @@
 package com.algobot76.leetcode._3;
 
+/**
+ * Two Pointers
+ */
 public class Solution4 {
     public int lengthOfLongestSubstring(String s) {
-        char[] chars = s.toCharArray();
-        if (chars.length < 2) {
-            return chars.length;
-        }
-        int l = 0;
-        int r = 0;
-        int maxLen = 0;
-        while (++l < chars.length) {
-            for (int i = r; i < l; i++) {
-                if (chars[l] == chars[i]) {
-                    if (l - r > maxLen) {
-                        maxLen = l - r;
-                    }
-                    r = i + 1;
-                    break;
-                }
+        char[] input = s.toCharArray();
+        int[] count = new int[256];
+        int ans = 0;
+
+        for (int l = 0, r = 0; r < input.length; r++) {
+            count[input[r]]++;
+            while (count[input[r]] > 1) {
+                count[input[l++]]--;
             }
+            ans = Math.max(ans, r - l + 1);
         }
-        if (l - r > maxLen) {
-            maxLen = l - r;
-        }
-        return maxLen;
+
+        return ans;
     }
 }
