@@ -19,6 +19,6 @@ public class Solution1 {
             }
         }
 
-        return nums.length + 1;
+        return len + 1;
     }
 }
