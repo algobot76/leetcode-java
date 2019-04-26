@@ -1,7 +1,7 @@
 package com.algobot76.leetcode.util;
 
 public class VersionControl {
-    public static void isBadVersion(int n) {
-        assert true;
+    public static boolean isBadVersion(int n) {
+        return true;
     }
 }
