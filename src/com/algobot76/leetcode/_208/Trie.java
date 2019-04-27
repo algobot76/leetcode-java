@@ -5,8 +5,8 @@ class TrieNode {
     private TrieNode[] children;
 
     public TrieNode() {
-        children = new TrieNode[26];
         isWord = false;
+        children = new TrieNode[26];
     }
 
     public void insert(String word, int index) {
