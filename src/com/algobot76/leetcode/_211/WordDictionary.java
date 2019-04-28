@@ -32,7 +32,7 @@ class TrieNode {
             for (TrieNode child : children) {
                 if (child != null) {
                     TrieNode node = child.find(word, index + 1);
-                    if (node != null) {
+                    if (node != null && node.isWord) {
                         return node;
                     }
                 }
