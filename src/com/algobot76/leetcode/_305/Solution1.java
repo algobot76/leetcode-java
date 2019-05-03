@@ -54,7 +54,7 @@ public class Solution1 {
     class UnionFind {
         private Map<Integer, Integer> parents;
 
-        public UnionFind(int m, int n) {
+        UnionFind(int m, int n) {
             parents = new HashMap<>();
             for (int i = 0; i < m; i++) {
                 for (int j = 0; j < n; j++) {
@@ -64,7 +64,7 @@ public class Solution1 {
             }
         }
 
-        public int find(int x) {
+        int find(int x) {
             int p = parents.get(x);
 
             while (p != parents.get(p)) {
@@ -79,7 +79,7 @@ public class Solution1 {
             return p;
         }
 
-        private void union(int x, int y) {
+        void union(int x, int y) {
             int px = find(x);
             int py = find(y);
             if (px != py) {
