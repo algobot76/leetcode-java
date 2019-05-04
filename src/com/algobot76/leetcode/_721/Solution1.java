@@ -8,10 +8,6 @@ import java.util.*;
 public class Solution1 {
     private UnionFind uf;
 
-    /**
-     * @param accounts: List[List[str]]
-     * @return: return a List[List[str]]
-     */
     public List<List<String>> accountsMerge(List<List<String>> accounts) {
         uf = new UnionFind();
 
