@@ -6,7 +6,7 @@ import java.util.Queue;
 /**
  * Two Heaps
  */
-class MedianFinder1 {
+public class MedianFinder1 {
     private Queue<Integer> maxHeap;
     private Queue<Integer> minHeap;
 
