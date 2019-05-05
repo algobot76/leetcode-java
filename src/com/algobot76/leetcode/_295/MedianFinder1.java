@@ -6,14 +6,14 @@ import java.util.Queue;
 /**
  * Two Heaps
  */
-class MedianFinder {
+class MedianFinder1 {
     private Queue<Integer> maxHeap;
     private Queue<Integer> minHeap;
 
     /**
      * initialize your data structure here.
      */
-    public MedianFinder() {
+    public MedianFinder1() {
         maxHeap = new PriorityQueue<>();
         minHeap = new PriorityQueue<>();
     }
