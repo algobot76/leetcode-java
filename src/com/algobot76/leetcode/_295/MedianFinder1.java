@@ -1,5 +1,6 @@
 package com.algobot76.leetcode._295;
 
+import java.util.Collections;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
@@ -14,7 +15,7 @@ public class MedianFinder1 {
      * initialize your data structure here.
      */
     public MedianFinder1() {
-        maxHeap = new PriorityQueue<>();
+        maxHeap = new PriorityQueue<>(Collections.reverseOrder());
         minHeap = new PriorityQueue<>();
     }
 
