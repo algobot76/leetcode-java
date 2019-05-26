@@ -6,7 +6,7 @@ public class Solution1 {
     public String mostCommonWord(String paragraph, String[] banned) {
         Set<String> bannedSet = new HashSet<>(Arrays.asList(banned));
         Map<String, Integer> count = new HashMap<>();
-        String[] words = paragraph.replaceAll("[^a-zA-Z]", " ").toLowerCase().split("\\s+");
+        String[] words = paragraph.replaceAll("\\W+", " ").toLowerCase().split("\\s+");
         for (String word : words) {
             if (!bannedSet.contains(word)) {
                 count.put(word, count.getOrDefault(word, 0) + 1);
