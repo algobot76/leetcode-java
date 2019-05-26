@@ -12,14 +12,14 @@ public class Solution2 {
         int start = 0;
         int end = 0;
         int maxLen = 0;
-        boolean[][] dp = new boolean[s.length()][s.length()];
+        boolean[][] f = new boolean[s.length()][s.length()];
 
         for (int j = 0; j < s.length(); j++) {
             for (int i = 0; i <= j; i++) {
-                if (s.charAt(i) == s.charAt(j) && ((j - i <= 2) || dp[i + 1][j - 1])) {
-                    dp[i][j] = true;
+                if (s.charAt(i) == s.charAt(j) && ((j - i <= 2) || f[i + 1][j - 1])) {
+                    f[i][j] = true;
                 }
-                if (dp[i][j]) {
+                if (f[i][j]) {
                     if (j - i + 1 > maxLen) {
                         maxLen = j - i + 1;
                         start = i;
