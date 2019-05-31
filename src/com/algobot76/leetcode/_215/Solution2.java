@@ -4,19 +4,19 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 
 /**
- * Heap
+ * Priority Queue
  */
 public class Solution2 {
     public int findKthLargest(int[] nums, int k) {
-        Queue<Integer> heap = new PriorityQueue<>();
+        Queue<Integer> pq = new PriorityQueue<>();
 
         for (int num : nums) {
-            heap.add(num);
-            if (heap.size() > k) {
-                heap.poll();
+            pq.offer(num);
+            if (pq.size() > k) {
+                pq.poll();
             }
         }
 
-        return heap.poll();
+        return pq.poll();
     }
 }
