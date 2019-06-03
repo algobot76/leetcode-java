@@ -12,49 +12,45 @@ public class Solution2 {
             return 0;
         }
 
-        int rows = grid.length;
-        int cols = grid[0].length;
-        int numIslands = 0;
+        int m = grid.length;
+        int n = grid[0].length;
+        int islands = 0;
 
-        for (int r = 0; r < rows; ++r) {
-            for (int c = 0; c < cols; ++c) {
-                if (grid[r][c] == '1') {
-                    ++numIslands;
-                    bfs(grid, r, c);
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (grid[i][j] == '1') {
+                    bfs(grid, i, j);
+                    islands++;
                 }
             }
         }
 
-        return numIslands;
+        return islands;
     }
 
-    private void bfs(char[][] grid, int r, int c) {
-        int rows = grid.length;
-        int cols = grid[0].length;
-        grid[r][c] = '0';
+    private boolean isValid(char[][] grid, int x, int y) {
+        int m = grid.length;
+        int n = grid[0].length;
+        return x >= 0 && x < m && y >= 0 && y < n && grid[x][y] == '1';
+    }
 
-        Queue<Integer> neighbors = new LinkedList<>();
-        neighbors.add(r * cols + c);
-
-        while (!neighbors.isEmpty()) {
-            int id = neighbors.remove();
-            int row = id / cols;
-            int col = id % cols;
-            if (row - 1 >= 0 && grid[row - 1][col] == '1') {
-                neighbors.add((row - 1) * cols + col);
-                grid[row - 1][col] = '0';
-            }
-            if (row + 1 < rows && grid[row + 1][col] == '1') {
-                neighbors.add((row + 1) * cols + col);
-                grid[row + 1][col] = '0';
-            }
-            if (col - 1 >= 0 && grid[row][col - 1] == '1') {
-                neighbors.add(row * cols + col - 1);
-                grid[row][col - 1] = '0';
-            }
-            if (col + 1 < cols && grid[row][col + 1] == '1') {
-                neighbors.add(row * cols + col + 1);
-                grid[row][col + 1] = '0';
+    private void bfs(char[][] grid, int x, int y) {
+        int m = grid.length;
+        int n = grid[0].length;
+        Queue<Integer[]> q = new LinkedList<>();
+        q.offer(new Integer[]{x, y});
+        grid[x][y] = '0';
+        while (!q.isEmpty()) {
+            Integer[] point = q.poll();
+            int[] dx = {1, 0, -1, 0};
+            int[] dy = {0, 1, 0, -1};
+            for (int i = 0; i < 4; i++) {
+                int nx = point[0] + dx[i];
+                int ny = point[1] + dy[i];
+                if (isValid(grid, nx, ny)) {
+                    q.offer(new Integer[]{nx, ny});
+                    grid[nx][ny] = '0';
+                }
             }
         }
     }
