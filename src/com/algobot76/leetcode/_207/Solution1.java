@@ -23,7 +23,7 @@ public class Solution1 {
         Queue<Integer> q = new LinkedList<>();
         for (int i = 0; i < inDegree.length; i++) {
             if (inDegree[i] == 0) {
-                q.add(i);
+                q.offer(i);
             }
         }
         int count = 0;
