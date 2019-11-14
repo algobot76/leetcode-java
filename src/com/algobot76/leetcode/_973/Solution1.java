@@ -3,9 +3,6 @@ package com.algobot76.leetcode._973;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
-/**
- * Priority Queue
- */
 public class Solution1 {
     public int[][] kClosest(int[][] points, int K) {
         if (points == null || points.length == 0) {

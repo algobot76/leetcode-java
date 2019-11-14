@@ -2,9 +2,6 @@ package com.algobot76.leetcode._973;
 
 import java.util.Arrays;
 
-/**
- * Sort
- */
 public class Solution2 {
     public int[][] kClosest(int[][] points, int K) {
         if (points == null || points.length == 0) {
