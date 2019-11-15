@@ -5,9 +5,6 @@ import com.algobot76.leetcode.util.ListNode;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Merge Lists One by One
- */
 public class Solution2 {
     public ListNode mergeKLists(ListNode[] lists) {
         if (lists == null || lists.length == 0) {
