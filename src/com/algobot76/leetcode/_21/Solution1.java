@@ -2,9 +2,6 @@ package com.algobot76.leetcode._21;
 
 import com.algobot76.leetcode.util.ListNode;
 
-/**
- * Recursive
- */
 public class Solution1 {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         if (l1 == null) {
