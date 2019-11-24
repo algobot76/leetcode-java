@@ -1,8 +1,5 @@
 package com.algobot76.leetcode._200;
 
-/**
- * DFS
- */
 public class Solution1 {
     public int numIslands(char[][] grid) {
         if (grid == null || grid.length == 0) {

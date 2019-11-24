@@ -3,9 +3,6 @@ package com.algobot76.leetcode._200;
 import java.util.LinkedList;
 import java.util.Queue;
 
-/**
- * BFS
- */
 public class Solution2 {
     public int numIslands(char[][] grid) {
         if (grid == null || grid.length == 0) {
